@@ -3,8 +3,7 @@
 <%= render @coin %>
 
 <div>
-  <%= link_to "Edit this coin", edit_coin_path(@coin) %> |
-  <%= link_to "Back to coins", coins_path %>
-
-  <%= button_to "Destroy this coin", @coin, method: :delete %>
+  <td><%= link_to "Editar", edit_coin_path(@coin) %></td> |
+  <td><%= link_to "Voltar", coins_path %></td>
+  <td><%= button_to "Apagar", @coin, method: :delete %></td>
 </div>
