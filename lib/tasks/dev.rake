@@ -9,9 +9,10 @@ namespace :dev do
 
       show_spinner("Migrando db"){%x(rails db:migrate)}
 
+      %x(rails dev:add_mining_types)
+
       %x(rails dev:add_coins)
 
-      %x(rails dev:add_mining_types)
 
     else
       puts "Voce nao esta em ambiente de desenvolvimento"
@@ -26,17 +27,20 @@ namespace :dev do
         {
         description: "Bitcoin",
         acronym: "BTC",
-        url_image: 'https://imagensemoldes.com.br/wp-content/uploads/2020/09/Logo-Bitcoin-PNG.png'
+        url_image: 'https://imagensemoldes.com.br/wp-content/uploads/2020/09/Logo-Bitcoin-PNG.png',
+        mining_type: MiningType.find_by(acronym: 'PoW')
         },
         {
         description: "Ethereum",
         acronym: "ETH",
-        url_image: 'https://img1.gratispng.com/20180516/ouw/kisspng-ethereum-cryptocurrency-blockchain-logo-eos-io-crypto-5afc9ab9b20d86.8643914515265041217293.jpg'
+        url_image: 'https://img1.gratispng.com/20180516/ouw/kisspng-ethereum-cryptocurrency-blockchain-logo-eos-io-crypto-5afc9ab9b20d86.8643914515265041217293.jpg',
+        mining_type: MiningType.all.sample
         },
         {
         description: "Dash",
         acronym: "DASH",
-        url_image: 'https://cryptomined.com/images/flags/dash_circle_Flag_1.png'
+        url_image: 'https://cryptomined.com/images/flags/dash_circle_Flag_1.png',
+        mining_type: MiningType.all.sample
         }
      ]
   coins.each do |coin|
