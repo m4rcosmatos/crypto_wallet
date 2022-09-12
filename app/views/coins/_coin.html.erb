@@ -1,16 +1,16 @@
 <div id="<%= dom_id coin %>">
   
-    <strong>Description:</strong>
+    <strong><%= Coin.human_attribute_name(:description)%>  </strong>
     <%= coin.description %>
   
 
   
-    <strong>Acronym:</strong>
+    <strong><%= Coin.human_attribute_name(:acronym)%></strong>
     <%= coin.acronym %>
   
 
   
-    <strong>Image:</strong>
+    <strong><%= Coin.human_attribute_name(:url_image)%></strong>
     <%= image_tag coin.url_image, width: 50, height: 50 %>
   
 
