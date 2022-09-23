@@ -1,4 +1,7 @@
-<div id="<%= dom_id coin %>">
+<div class="container-fluid">
+<div class="row">
+<div class="col-6">
+  <div id="<%= dom_id coin %>">
   
     <strong><%= Coin.human_attribute_name(:description)%>  </strong>
     <%= coin.description %>
@@ -14,4 +17,7 @@
     <%= image_tag coin.url_image, width: 50, height: 50 %>
   
 
+  </div>
+</div>
+</div>
 </div>

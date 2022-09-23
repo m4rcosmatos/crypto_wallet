@@ -1,16 +1,10 @@
-<p>
-  <%= link_to 'Português', root_path(locale:'pt-BR') %>
-</p>
-<p>
-  <%= link_to 'English', root_path(locale:'en') %>
-</p>
-<h1>Seja bem Vindo</h1>
-<p>O idioma utilizado é <strong> <%= t('actual_locale') %> </strong> </p>
-<p><strong>Data:<strong><%= l(Date.today)%> </p>
-<p><%= t('hello')%>  </p>
-
-<%= render 'menu' %>
-<ul>
+<div class="jumbotron">
+  <h1 class="display-4">Seja Bem Vindo!</h1>
+  <p class="lead">Este é o Crypto Wallet.</p>
+  <hr class="my-4">
+  <p>Para Começar selecione uma das opções.</p>
+  <p class="lead">
     
-    
-</ul>
+  </p>
+  <%= render 'menu' %>
+</div>
