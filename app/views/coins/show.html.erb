@@ -3,7 +3,8 @@
 <%= render @coin %>
 
 <div>
-  <td><%= link_to t('links.edit'), edit_coin_path(@coin) %></td> |
-  <td><%= link_to t('links.back'), coins_path %></td>
+  <td><%= link_to t('links.edit'), edit_coin_path(@coin), class:"btn btn-outline-primary" %></td> |
+  <td><%= link_to t('links.back'), coins_path, class:"btn btn-outline-primary" %></td>
+  
   <td><%= button_to t('links.delete'), @coin, method: :delete %></td>
 </div>
