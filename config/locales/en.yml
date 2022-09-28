@@ -38,7 +38,6 @@ en:
     delete: "Delete"
     new: "New"
     back: "Back"
-    back2: "Voltar a Tela Inicial"
   new:
     coin: "New Coin"
     mining_type: "New Mining Type"
